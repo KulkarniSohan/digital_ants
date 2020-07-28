@@ -10,8 +10,9 @@ class Application;
 
 class BaseEvent 
 {
-	private :
+	protected :
 		Application& m_app;
+	private :
 		string m_ip;
 		uint16_t m_port;
 		int m_sergeant_no;
@@ -28,6 +29,11 @@ class BaseEvent
 		{
 			cout << "BaseEvent :: get_ip" << endl;
 			return m_ip;
+		}
+		int get_sergeant_no()
+		{
+			cout << "BaseEvent :: get_sergeant_no" << endl;
+			return m_sergeant_no;
 		}
 		uint16_t get_port()
 		{

@@ -36,7 +36,7 @@ class AdminEngineController
 		queue<BaseEvent*>& get_msg_cntrler_to_aec_cntrler_queue();
 		queue<BaseEvent*>& get_aec_cntrler_to_msg_cntrler_queue();
 
-		void process(EchoRespEvent* lp_rcvd_event);
+		//void process(EchoRespEvent* lp_rcvd_event);
 };
 
 

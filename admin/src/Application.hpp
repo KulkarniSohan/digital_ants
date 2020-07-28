@@ -3,6 +3,7 @@
 class MessageController;
 class UdpWorker;
 class AdminEngineController;
+class SergeantDao;
 
 class Application
 {
@@ -10,6 +11,7 @@ class Application
         UdpWorker* mp_udp_worker_instance;
 		MessageController* mp_mesg_cntrler;
 		AdminEngineController* mp_admin_engine_cntrler;
+		SergeantDao* mp_sergeant_dao;
     public :
         UdpWorker& get_udp_worker()
         {
@@ -22,6 +24,10 @@ class Application
 		AdminEngineController& get_admin_engine_cntrler()
 		{
 			return (*mp_admin_engine_cntrler);
+		}
+		SergeantDao& get_sergeant_dao()
+		{
+			return (*mp_sergeant_dao);
 		}
         void startup();
 };

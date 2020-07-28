@@ -5,8 +5,6 @@
 #include <iostream>
 #include <string>
 using namespace std;
-#define REQ_SENT 100
-#define RESP_RCVD 200
 
 
 

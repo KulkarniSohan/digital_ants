@@ -13,6 +13,7 @@
 #include <strings.h>
 #include <arpa/inet.h>
 #include "Application.hpp"
+#include "dao/SergeantDao.hpp"
 
 using namespace std;
 
@@ -22,6 +23,7 @@ void
 Application :: startup ()
 {
 	pthread_t l_sock_recv_thread, l_mesg_cntrler_thread, l_msg_aec_cntrler_thread, l_aec_msg_cntrler_thread;
+	mp_sergeant_dao = SergeantDao :: get_instance();
     mp_udp_worker_instance = UdpWorker :: get_instance(*this);
     l_sock_recv_thread = mp_udp_worker_instance -> init();
 	mp_mesg_cntrler = MessageController :: get_instance(*this);

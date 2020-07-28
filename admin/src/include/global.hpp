@@ -13,6 +13,9 @@
 #include <arpa/inet.h>
 #include <cstring>
 
+#define REQ_SENT 1
+#define RESP_RCVD 0
+
 
 typedef void * (*THREAD_FUNCTION) (void*);
 

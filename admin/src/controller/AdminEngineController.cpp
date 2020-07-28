@@ -56,17 +56,18 @@ AdminEngineController :: msg_to_aec_thread()
 		{
 			cout << "AdminEngineController :: msg_to_aec_thread : EchoRespEvent Rcvd" << endl;
 			/* We can call the process virtual function of the BaseEvent*/
-			//process(lp_rcvd_event);
+			lp_rcvd_event -> process();
 		}
 	}
 }
 
+/*
 void
 AdminEngineController :: process(EchoRespEvent* lp_rcvd_event)
 {
 	cout << "AdminEngineController :: process " << endl;
 	// get Sergeant from dao.
-	/*
+	
 	Sergeant* lp_sergeant = m_app . get_sergeant_dao() . get_sergeant(lp_rcvd_event -> get_sergeant_no());
 	if (lp_sergeant == NULL)
 	{
@@ -74,8 +75,9 @@ AdminEngineController :: process(EchoRespEvent* lp_rcvd_event)
 		return;
 	}
 	lp_sergeant -> set_current_state(RESP_RCVD);
-	*/
+	
 }
+*/
 
 void*
 AdminEngineController :: aec_to_msg_thread()
