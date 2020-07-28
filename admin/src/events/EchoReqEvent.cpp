@@ -16,3 +16,9 @@ EchoReqEvent :: ~EchoReqEvent()
 {
 	cout << "EchoReqEvent :: ~EchoReqEvent" << endl;
 }
+
+void
+EchoReqEvent :: load()
+{
+	cout << "EchoReqEvent :: load " << endl;
+}

@@ -17,6 +17,7 @@ class EchoReqEvent : public BaseEvent
 		static BaseEvent* get_instance(Application& app, string& m_ip, uint16_t port, int sergeant_no);
 		EchoReqEvent(Application& app, string& ip, uint16_t port, int sergeant_no);
 		~EchoReqEvent();
+		void load();
 };
 
 

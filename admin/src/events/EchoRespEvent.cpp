@@ -16,3 +16,9 @@ EchoRespEvent :: get_instance(Application& app, string& ip, uint16_t port, int s
 {
 	return new EchoRespEvent(app, ip, port, sergeant_no);
 }
+
+void
+EchoRespEvent :: process()
+{
+	cout << "EchoRespEvent :: process " << endl;
+}

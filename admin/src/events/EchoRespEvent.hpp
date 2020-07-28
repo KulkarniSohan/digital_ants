@@ -14,6 +14,7 @@ class EchoRespEvent : public BaseEvent
 		EchoRespEvent(Application& app, string& ip, uint16_t port, int sergeant_no);
 		~EchoRespEvent();
 		static BaseEvent* get_instance(Application& app, string& ip, uint16_t port, int sergeant_no);
+		void process();
 
 };
 

@@ -34,6 +34,14 @@ class BaseEvent
 			cout << "BaseEvent :: get_port" << endl;
 			return m_port;
 		}
+		virtual void process()
+		{
+			cout << "BaseEvent :: process" << endl;
+		}
+		virtual void load()
+		{
+			cout << "BaseEvent :: load" << endl;
+		}
 };
 
 
